@@ -1,0 +1,21 @@
+ul {
+  display: flex;
+  justify-content: space-between;
+}
+ul li {
+  display: inline-block;
+  margin: 10px;
+  white-space: nowrap;
+}
+a{
+  text-decoration: none;
+}
+::-webkit-scrollbar {
+  display: none;
+}
+.active{
+  color:red;
+}
+.first{
+  color:green;
+}
