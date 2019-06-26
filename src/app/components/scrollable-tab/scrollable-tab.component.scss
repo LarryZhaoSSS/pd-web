@@ -3,7 +3,10 @@ ul {
   justify-content: space-between;
 }
 ul li {
-  display: inline-block;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
   margin: 10px;
   white-space: nowrap;
 }
@@ -18,4 +21,10 @@ a{
 }
 .first{
   color:green;
+}
+.indicator {
+  background:brown;
+  height:2px;
+  width:2rem;
+  margin-top:2px;
 }
