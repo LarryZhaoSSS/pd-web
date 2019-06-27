@@ -89,23 +89,6 @@ export class AppComponent {
       link: '',
       caption: ''
     },
-    {
-      imgUrl:
-        'https://media.istockphoto.com/photos/pretty-young-teenage-girl-relaxing-on-a-grass-picture-id521982322',
-      link: '',
-      caption: ''
-    },
-    {
-      imgUrl:
-        'https://media.istockphoto.com/photos/beautiful-women-working-out-in-gym-picture-id623680490',
-      link: '',
-      caption: ''
-    },
-    {
-      imgUrl: `https://i.loli.net/2019/06/27/5d13989366bed19716.jpg`,
-      link: '',
-      caption: ''
-    }
   ]
   handleTabSelected(tabMenu: TopMenu) {
     console.log(tabMenu)
