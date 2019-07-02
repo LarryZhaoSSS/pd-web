@@ -16,6 +16,7 @@ import {
     HomeGrandComponent,
     HomeAuxComponent
   ],
+ 
   imports: [SharedModule, HomeRoutingModule]
 })
 export class HomeModule {}
