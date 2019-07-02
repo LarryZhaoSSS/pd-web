@@ -1,10 +1,21 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { HorizontalGridComponent } from './components/horizontal-grid/horizontal-grid.component';
-import { GridItemDirective,GridItemImageDirective,GridItemTitleDirective } from './directives';
+import {
+  ScrollableTabComponent,
+  ImageSliderComponent,
+  HorizontalGridComponent
+} from './components';
+import {
+  GridItemDirective,
+  GridItemImageDirective,
+  GridItemTitleDirective
+} from './directives';
+
 @NgModule({
   declarations: [
+    ScrollableTabComponent,
+    ImageSliderComponent,
     HorizontalGridComponent,
     GridItemDirective,
     GridItemImageDirective,
@@ -14,6 +25,8 @@ import { GridItemDirective,GridItemImageDirective,GridItemTitleDirective } from 
   exports: [
     CommonModule,
     FormsModule,
+    ScrollableTabComponent,
+    ImageSliderComponent,
     HorizontalGridComponent,
     GridItemDirective,
     GridItemImageDirective,

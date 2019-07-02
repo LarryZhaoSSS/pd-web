@@ -1,19 +1,21 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
-import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { ScrollableTabComponent ,ImageSliderComponent} from './components';
-import {FormsModule} from '@angular/forms'
 import { SharedModule } from './shared/shared.module';
+import { AppRoutingModule } from './app-routing.module';
+import { HomeModule } from './home';
+
 @NgModule({
-  declarations: [
-    AppComponent,
-    ScrollableTabComponent,
-    ImageSliderComponent,
-    
+  declarations: [AppComponent],
+  imports: [
+    BrowserModule,
+    FormsModule,
+    SharedModule,
+    AppRoutingModule,
+    HomeModule
   ],
-  imports: [BrowserModule, AppRoutingModule, FormsModule, SharedModule],
   providers: [],
   bootstrap: [AppComponent]
 })

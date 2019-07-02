@@ -5,9 +5,6 @@ import { SharedModule } from '../shared/shared.module';
 
 @NgModule({
   declarations: [],
-  imports: [
-    SharedModule,
-    RecommendRoutingModule
-  ]
+  imports: [SharedModule, RecommendRoutingModule]
 })
-export class RecommendModule { }
+export class RecommendModule {}
