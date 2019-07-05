@@ -1,4 +1,4 @@
-import { Component, Input, Output, EventEmitter } from '@angular/core';
+import { Component, Input, Output, EventEmitter, ChangeDetectionStrategy } from '@angular/core';
 
 export interface TopMenu {
   id: number;
@@ -9,7 +9,8 @@ export interface TopMenu {
 @Component({
   selector: 'app-scrollable-tab',
   templateUrl: './scrollable-tab.component.html',
-  styleUrls: ['./scrollable-tab.component.css']
+  styleUrls: ['./scrollable-tab.component.css'],
+  changeDetection:ChangeDetectionStrategy.OnPush
 })
 /**
  * 接口是可选的，也就说只要有类似 ngOnInit 这样的方法存在

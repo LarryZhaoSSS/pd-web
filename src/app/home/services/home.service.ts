@@ -1,5 +1,7 @@
-import { Injectable } from '@angular/core';
-import {  TopMenu, ImageSlider, Channel } from 'src/app/shared/components';
+import { Injectable } from '@angular/core'
+import { TopMenu, ImageSlider, Channel } from 'src/app/shared/components'
+import { HttpClient } from '@angular/common/http'
+import { environment } from 'src/environments/environment.prod'
 
 @Injectable()
 export class HomeService {
@@ -216,13 +218,20 @@ export class HomeService {
       link: 'furnitures'
     }
   ]
+  constructor(private http: HttpClient) {}
   getTabs() {
-    return this.topMenus
+    return this.http.get<TopMenu[]>(`${environment.baseUrl}/tabs`, {
+      params: { icode: `${environment.icode}` }
+    })
   }
   getChannels() {
-    return this.channels
+     return this.http.get<Channel[]>(`${environment.baseUrl}/channels`, {
+       params: { icode: `${environment.icode}` }
+     })
   }
-  getImageSliders() {
-    return this.imageSliders
+  getBanners() {
+    return this.http.get<ImageSlider[]>(`${environment.baseUrl}/banners`, {
+      params: { icode: `${environment.icode}` }
+    })
   }
 }

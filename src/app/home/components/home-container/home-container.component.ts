@@ -13,7 +13,10 @@ export class HomeContainerComponent implements OnInit {
   topMenus: TopMenu[] = []
 
   ngOnInit(): void {
-    this.topMenus = this.service.getTabs()
+    this.service.getTabs().subscribe(tabs=>{
+      this.topMenus = tabs
+      
+    })
     // this.imageSliders = this.service.imageSliders
   }
 

@@ -3,8 +3,10 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
-};
+         production: false,
+         baseUrl: 'http://apis.imooc.com/api',
+         icode: `06C96D067FBAAF8E`
+       }
 
 /*
  * For easier debugging in development mode, you can import the following file
