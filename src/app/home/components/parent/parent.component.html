@@ -1,4 +1,4 @@
 <p>{{ title }}parent works!</p>
 <br />
 <button (click)="handleClick()">触发子视图脏值检测</button>
-<app-count-down></app-count-down>
+<app-count-down [startDate]="startDate" [futureDate]="futureDate"></app-count-down>

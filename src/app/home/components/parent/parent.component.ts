@@ -9,7 +9,8 @@ import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core'
 export class ParentComponent implements OnInit {
   constructor() {}
   title = ''
-
+  startDate = new Date(2019,6,1)
+  futureDate = new Date(2019,6,2)
   ngOnInit() {}
   handleClick() {}
 }
