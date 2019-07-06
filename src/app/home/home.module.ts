@@ -7,7 +7,8 @@ import {
   HomeContainerComponent,
   HomeDetailComponent,
   HomeGrandComponent,
-  HomeAuxComponent
+  HomeAuxComponent,
+  ParentComponent
 } from './components';
 
 @NgModule({
@@ -15,7 +16,8 @@ import {
     HomeContainerComponent,
     HomeDetailComponent,
     HomeGrandComponent,
-    HomeAuxComponent
+    HomeAuxComponent,
+    ParentComponent
   ],
  providers:[HomeService],
   imports: [SharedModule, HomeRoutingModule]

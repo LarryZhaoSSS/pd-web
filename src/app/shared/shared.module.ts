@@ -12,12 +12,14 @@ import {
   GridItemTitleDirective
 } from './directives';
 import { AgoPipe } from './pipes/ago.pipe';
+import { CountDownComponent } from './components/count-down';
 
 @NgModule({
   declarations: [
     ScrollableTabComponent,
     ImageSliderComponent,
     HorizontalGridComponent,
+    CountDownComponent,
     GridItemDirective,
     GridItemImageDirective,
     GridItemTitleDirective,
@@ -30,6 +32,7 @@ import { AgoPipe } from './pipes/ago.pipe';
     ScrollableTabComponent,
     ImageSliderComponent,
     HorizontalGridComponent,
+    CountDownComponent,
     GridItemDirective,
     GridItemImageDirective,
     GridItemTitleDirective,

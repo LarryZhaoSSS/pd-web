@@ -1,22 +1,21 @@
-import { Component, OnInit } from '@angular/core'
+import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
 import { TopMenu, ImageSlider } from 'src/app/shared/components'
 import { Router } from '@angular/router'
 import { HomeService } from '../../services';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-home-container',
   templateUrl: './home-container.component.html',
-  styleUrls: ['./home-container.component.css']
+  styleUrls: ['./home-container.component.css'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class HomeContainerComponent implements OnInit {
   constructor(private router: Router, private service: HomeService) {}
-  topMenus: TopMenu[] = []
+  topMenus$: Observable< TopMenu[]> 
 
   ngOnInit(): void {
-    this.service.getTabs().subscribe(tabs=>{
-      this.topMenus = tabs
-      
-    })
+    this.topMenus$ = this.service.getTabs()
     // this.imageSliders = this.service.imageSliders
   }
 

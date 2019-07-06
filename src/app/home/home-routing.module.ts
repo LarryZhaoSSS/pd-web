@@ -6,6 +6,7 @@ import {
   HomeGrandComponent,
   HomeAuxComponent
 } from './components';
+import { ParentComponent } from './components/parent/parent.component';
 
 const routes: Routes = [
   {
@@ -40,8 +41,13 @@ const routes: Routes = [
         ]
       }
     ]
+  },
+  {
+    path: 'change-detection',
+    pathMatch: 'full',
+    component: ParentComponent
   }
-];
+]
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
