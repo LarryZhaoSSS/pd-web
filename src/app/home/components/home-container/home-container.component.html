@@ -5,6 +5,7 @@
   [titleColor]="'#3f3f3f'"
   [titleActiveColor]="'red'"
   (tabSelected)="handleTabSelected($event)"
+  [selectedTabLink]="selectedTabLink$ | async"
 >
 </app-scrollable-tab>
 <router-outlet></router-outlet>

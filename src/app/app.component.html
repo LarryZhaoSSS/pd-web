@@ -3,3 +3,7 @@
   而不是在 router-outlet 中包含
 -->
 <router-outlet></router-outlet>
+<app-footer
+  [selectedIndex]="selectedIndex$ | async"
+  (tabSelected)="handleTabSelect($event)"
+></app-footer>

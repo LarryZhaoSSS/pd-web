@@ -6,18 +6,14 @@ import { HomeService } from './services/home.service';
 import {
   HomeContainerComponent,
   HomeDetailComponent,
-  HomeGrandComponent,
-  HomeAuxComponent,
-  ParentComponent
+ 
 } from './components';
 
 @NgModule({
   declarations: [
     HomeContainerComponent,
     HomeDetailComponent,
-    HomeGrandComponent,
-    HomeAuxComponent,
-    ParentComponent
+  
   ],
  providers:[HomeService],
   imports: [SharedModule, HomeRoutingModule]

@@ -13,6 +13,7 @@ import {
 } from './directives';
 import { AgoPipe } from './pipes/ago.pipe';
 import { CountDownComponent } from './components/count-down';
+import { FooterComponent } from './components/footer';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { CountDownComponent } from './components/count-down';
     ImageSliderComponent,
     HorizontalGridComponent,
     CountDownComponent,
+    FooterComponent,
     GridItemDirective,
     GridItemImageDirective,
     GridItemTitleDirective,
@@ -33,6 +35,7 @@ import { CountDownComponent } from './components/count-down';
     ImageSliderComponent,
     HorizontalGridComponent,
     CountDownComponent,
+    FooterComponent,
     GridItemDirective,
     GridItemImageDirective,
     GridItemTitleDirective,

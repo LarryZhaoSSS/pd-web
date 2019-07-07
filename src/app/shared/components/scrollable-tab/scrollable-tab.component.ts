@@ -19,12 +19,12 @@ export interface TopMenu {
  * 另一个是对组件涉及到哪些生命周期一目了然
  */
 export class ScrollableTabComponent {
-  selectedIndex = -1;
   @Input() menus: TopMenu[] = [];
   @Input() backgroundColor = '#fff';
   @Input() titleActiveColor = 'yellow';
   @Input() titleColor = 'blue';
   @Input() indicatorColor = 'brown';
+  @Input() selectedTabLink: string;
   @Output() tabSelected = new EventEmitter();
   /**
    * 第一个执行，构造函数是建立这个类的实例
@@ -36,7 +36,6 @@ export class ScrollableTabComponent {
   }
 
   handleSelection(index: number) {
-    this.selectedIndex = index;
-    this.tabSelected.emit(this.menus[this.selectedIndex]);
+    this.tabSelected.emit(this.menus[index]);
   }
 }

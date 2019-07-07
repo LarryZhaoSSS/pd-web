@@ -10,13 +10,4 @@
 <ng-template #other>
   Other works
 </ng-template>
-<a
-  [routerLink]="['grand']"
-  routerLinkActive="active"
-  [queryParams]="{ name: 'zhangsan', gender: 'male' }"
-  >link to grand</a
->
 
-<a [routerLink]="[{ outlets: { second: ['aux'] } }]">link to second</a>
-<router-outlet></router-outlet>
-<router-outlet name="second"></router-outlet>
