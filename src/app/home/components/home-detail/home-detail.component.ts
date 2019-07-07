@@ -10,7 +10,7 @@ import { ActivatedRoute } from '@angular/router'
 import { HomeService } from '../../services/home.service'
 import { filter, map, switchMap } from 'rxjs/operators'
 import { Observable, Subscription } from 'rxjs'
-import { Ad } from 'src/app/shared/domain'
+import { Ad, Product } from 'src/app/shared/domain'
 
 @Component({
   selector: 'app-home-detail',
@@ -29,6 +29,7 @@ export class HomeDetailComponent implements OnInit, OnDestroy {
   channels$: Observable<Channel[]>
   sub: Subscription
   ad$: Observable<Ad>
+  products$: Observable<Product[]>
   ngOnInit() {
     this.imageSliders$ = this.service.getBanners()
     this.channels$ = this.service.getChannels()
@@ -44,6 +45,9 @@ export class HomeDetailComponent implements OnInit, OnDestroy {
       switchMap(tab => this.service.getAdByTab(tab)),
       filter(ads => ads.length > 0),
       map(ads => ads[0])
+    )
+    this.products$ = this.selectedTabLink$.pipe(
+      switchMap(tab => this.service.getProductsByTab(tab)),
     )
   }
   ngOnDestroy(): void {

@@ -1,5 +1,5 @@
 <app-scrollable-tab
-  [menus]="(topMenus$ | async)"
+  [menus]="topMenus$ | async"
   [backgroundColor]="'#fff'"
   [indicatorColor]="'red'"
   [titleColor]="'#3f3f3f'"
@@ -8,4 +8,6 @@
   [selectedTabLink]="selectedTabLink$ | async"
 >
 </app-scrollable-tab>
-<router-outlet></router-outlet>
+<div class="main">
+  <router-outlet></router-outlet>
+</div>

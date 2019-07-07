@@ -14,6 +14,7 @@ import {
 import { AgoPipe } from './pipes/ago.pipe';
 import { CountDownComponent } from './components/count-down';
 import { FooterComponent } from './components/footer';
+import { VerticalGridComponent } from './components/vertical-grid';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { FooterComponent } from './components/footer';
     HorizontalGridComponent,
     CountDownComponent,
     FooterComponent,
+    VerticalGridComponent,
     GridItemDirective,
     GridItemImageDirective,
     GridItemTitleDirective,
@@ -36,6 +38,7 @@ import { FooterComponent } from './components/footer';
     HorizontalGridComponent,
     CountDownComponent,
     FooterComponent,
+    VerticalGridComponent,
     GridItemDirective,
     GridItemImageDirective,
     GridItemTitleDirective,
