@@ -36,3 +36,27 @@
   place-content: stretch;
   place-items: center;
 }
+.product-tags >  span {
+  margin-right: 5px;
+}
+.price-section {
+  grid-area: price-detail;
+  color: #d24749;
+  margin: 0 1rem;
+}
+.price-desc {
+  grid-area: price-desc;
+  color:#3f3f3f;
+  font-size: 0.8rem;
+}
+.price-avatar {
+  grid-area: price-avatar;
+  margin:0;
+}
+.price {
+  display: inline-block;
+  padding:0;
+}
+.price-avatar > img {
+  position:relative;
+}

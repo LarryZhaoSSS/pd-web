@@ -9,13 +9,15 @@ import {
 import {
   GridItemDirective,
   GridItemImageDirective,
-  GridItemTitleDirective
+  GridItemTitleDirective,
+  TagDirective
 } from './directives';
 import { AgoPipe } from './pipes/ago.pipe';
 import { CountDownComponent } from './components/count-down';
 import { FooterComponent } from './components/footer';
 import { VerticalGridComponent } from './components/vertical-grid';
 import { ProductCardComponent } from './components/product-card';
+import { AvatarDirective } from './directives/avatar.directive';
 
 @NgModule({
   declarations: [
@@ -29,6 +31,8 @@ import { ProductCardComponent } from './components/product-card';
     GridItemDirective,
     GridItemImageDirective,
     GridItemTitleDirective,
+    TagDirective,
+    AvatarDirective,
     AgoPipe
   ],
   imports: [CommonModule, FormsModule],
@@ -45,6 +49,8 @@ import { ProductCardComponent } from './components/product-card';
     GridItemDirective,
     GridItemImageDirective,
     GridItemTitleDirective,
+    TagDirective,
+    AvatarDirective,
     AgoPipe
   ]
 })
