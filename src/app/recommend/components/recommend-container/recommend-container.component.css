@@ -4,3 +4,12 @@
   align-items: stretch;
   flex:1;
 }
+.ad-container{
+  padding: 0 0.5rem;
+  background-color:#fff;
+}
+.ad-image{
+  width:100%;
+  height: 100%;
+  object-fit: contain;
+}

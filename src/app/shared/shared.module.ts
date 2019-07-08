@@ -18,6 +18,7 @@ import { FooterComponent } from './components/footer';
 import { VerticalGridComponent } from './components/vertical-grid';
 import { ProductCardComponent } from './components/product-card';
 import { AvatarDirective } from './directives/avatar.directive';
+import { ProductTileComponent } from './components/product-tile';
 
 @NgModule({
   declarations: [
@@ -28,6 +29,7 @@ import { AvatarDirective } from './directives/avatar.directive';
     FooterComponent,
     VerticalGridComponent,
     ProductCardComponent,
+    ProductTileComponent,
     GridItemDirective,
     GridItemImageDirective,
     GridItemTitleDirective,
@@ -46,6 +48,7 @@ import { AvatarDirective } from './directives/avatar.directive';
     FooterComponent,
     VerticalGridComponent,
     ProductCardComponent,
+    ProductTileComponent,
     GridItemDirective,
     GridItemImageDirective,
     GridItemTitleDirective,

@@ -36,7 +36,7 @@
   place-content: stretch;
   place-items: center;
 }
-.product-tags >  span {
+.product-tags > span {
   margin-right: 5px;
 }
 .price-section {
@@ -46,17 +46,18 @@
 }
 .price-desc {
   grid-area: price-desc;
-  color:#3f3f3f;
+  color: #3f3f3f;
   font-size: 0.8rem;
 }
 .price-avatar {
   grid-area: price-avatar;
-  margin:0;
+  margin: 0;
 }
 .price {
-  display: inline-block;
-  padding:0;
+  display: inline;
+  font-size: 1.3rem;
+  padding: 0;
 }
 .price-avatar > img {
-  position:relative;
+  position: relative;
 }
