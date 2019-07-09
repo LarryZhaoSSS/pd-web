@@ -12,6 +12,7 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http'
 import { ParamInterceptor } from './home/interceptor/param.interceptor';
 import { RecommendModule } from './recommend';
 import { MyModule } from './my';
+import { ProductModule } from './product/product.module';
 @NgModule({
   declarations: [AppComponent],
   imports: [
@@ -22,7 +23,8 @@ import { MyModule } from './my';
     HttpClientModule,
     HomeModule,
     RecommendModule,
-    MyModule
+    MyModule,
+    ProductModule
   ],
   providers: [
     {

@@ -8,4 +8,5 @@ export class TagDirective {
   @Input() @HostBinding('style.color') tagColor = '#c1516a'
   @Input() @HostBinding('style.font-size') tagSize = '0.8rem'
   @Input() @HostBinding('style.padding') tagPadding = '6px'
+  @Input() @HostBinding('style.border-radius') tagRadius = '0';
 }

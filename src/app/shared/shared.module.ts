@@ -19,6 +19,7 @@ import { VerticalGridComponent } from './components/vertical-grid';
 import { ProductCardComponent } from './components/product-card';
 import { AvatarDirective } from './directives/avatar.directive';
 import { ProductTileComponent } from './components/product-tile';
+import { BackButtonComponent } from './components/back-button/back-button.component';
 
 @NgModule({
   declarations: [
@@ -30,6 +31,7 @@ import { ProductTileComponent } from './components/product-tile';
     VerticalGridComponent,
     ProductCardComponent,
     ProductTileComponent,
+    BackButtonComponent,
     GridItemDirective,
     GridItemImageDirective,
     GridItemTitleDirective,
@@ -49,6 +51,7 @@ import { ProductTileComponent } from './components/product-tile';
     VerticalGridComponent,
     ProductCardComponent,
     ProductTileComponent,
+    BackButtonComponent,
     GridItemDirective,
     GridItemImageDirective,
     GridItemTitleDirective,
