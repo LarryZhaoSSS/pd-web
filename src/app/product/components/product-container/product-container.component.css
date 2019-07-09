@@ -21,7 +21,9 @@ app-back-button {
 }
 .title,
 .coupon,
-.guarantee {
+.guarantee,
+.group-short-list
+{
   grid-column: 1/4;
 }
 .price-section .now-price {
@@ -49,4 +51,9 @@ app-back-button {
   margin: 5px 0;
   color: darkgrey;
   font-size: 1.1rem;
+}
+.group-short-list{
+  width:100%;
+  padding: 0.4rem 0;
+  background-color: #f5f5f5;
 }
