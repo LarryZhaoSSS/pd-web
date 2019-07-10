@@ -36,4 +36,5 @@ export class AppComponent {
       ? 4
       : 0
   }
+  removeDialog() {}
 }
