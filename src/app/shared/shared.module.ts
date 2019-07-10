@@ -20,6 +20,7 @@ import { ProductCardComponent } from './components/product-card';
 import { AvatarDirective } from './directives/avatar.directive';
 import { ProductTileComponent } from './components/product-tile';
 import { BackButtonComponent } from './components/back-button/back-button.component';
+import { DialogModule } from '../dialog/index';
 
 @NgModule({
   declarations: [
@@ -43,6 +44,7 @@ import { BackButtonComponent } from './components/back-button/back-button.compon
   exports: [
     CommonModule,
     FormsModule,
+    DialogModule,
     ScrollableTabComponent,
     ImageSliderComponent,
     HorizontalGridComponent,

@@ -3,6 +3,7 @@ import { TabItem } from './shared/domain/index'
 import { Observable } from 'rxjs'
 import { Router, NavigationEnd } from '@angular/router'
 import { map, filter } from 'rxjs/operators'
+import { DialogService } from './dialog/services/dialog.service';
 
 @Component({
   selector: 'app-root',
@@ -14,7 +15,7 @@ export class AppComponent {
   handleTabSelect(tab: TabItem) {
     this.router.navigate([tab.link])
   }
-  constructor(private router: Router) {}
+  constructor(private router: Router, private dialogService:DialogService) {}
   ngOnInit(): void {
     this.selectedIndex$ = this.router.events.pipe(
       filter(ev => ev instanceof NavigationEnd),
@@ -35,5 +36,8 @@ export class AppComponent {
       : tab === 'my'
       ? 4
       : 0
+  }
+  removeDialog() {
+    this.dialogService.close()
   }
 }
