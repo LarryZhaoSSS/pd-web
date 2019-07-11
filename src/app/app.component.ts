@@ -37,7 +37,11 @@ export class AppComponent {
       ? 4
       : 0
   }
+<<<<<<< HEAD
   removeDialog() {
     this.dialogService.close()
   }
+=======
+  removeDialog() {}
+>>>>>>> 572570600fa1c5ce2c7031beaf1d975ecd5e8735
 }

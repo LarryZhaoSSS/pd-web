@@ -32,6 +32,7 @@ export class DomService {
     private injector: Injector,
     @Inject(DOCUMENT) private document: Document
   ) {}
+<<<<<<< HEAD
   /**
    * appendComponentTo
    */
@@ -62,10 +63,31 @@ export class DomService {
       if (inputs.hasOwnProperty(key)) {
         const element = inputs[key];
         componentRef.instance[key] = element;
+=======
+  public appendComponentTo(parentId: string, child: Type<any>, ChildConfig: childConfig) {
+    const childComponentRef = this.resolver
+      .resolveComponentFactory(child)
+      .create(this.injector)
+    this.attachConfig(ChildConfig,childComponentRef)
+    this.childComponentRef = childComponentRef
+    this.appRef.attachView(childComponentRef.hostView)
+    const childDOMElement = (childComponentRef.hostView as EmbeddedViewRef<any>)
+      .rootNodes[0] as HTMLElement
+    this.document.getElementById(parentId).appendChild(childDOMElement)
+  }
+  public attachConfig(config: childConfig, componentRef: ComponentRef<any>) {
+    const inputs = config.inputs
+    const outputs = config.outputs
+    for (const key in inputs) {
+      if (inputs.hasOwnProperty(key)) {
+        const element = inputs[key]
+        componentRef.instance[key] = element
+>>>>>>> 572570600fa1c5ce2c7031beaf1d975ecd5e8735
       }
     }
     for (const key in outputs) {
       if (outputs.hasOwnProperty(key)) {
+<<<<<<< HEAD
         const element = outputs[key];
         componentRef.instance[key] = element;
       }
@@ -77,5 +99,14 @@ export class DomService {
    */
   public removeComponent() {
     this.appRef.detachView(this.childComponentRef.hostView);
+=======
+        const element = outputs[key]
+        componentRef.instance[key] = element
+      }
+    }
+  }
+  public removeComponent() {
+    this.appRef.detachView(this.childComponentRef.hostView)
+>>>>>>> 572570600fa1c5ce2c7031beaf1d975ecd5e8735
   }
 }
