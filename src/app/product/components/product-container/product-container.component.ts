@@ -1,6 +1,6 @@
-import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core'
+import { Component, OnInit, ChangeDetectionStrategy, EventEmitter } from '@angular/core'
 import { OrderService } from '../../services/order.service'
-import { ActivatedRoute } from '@angular/router'
+import { ActivatedRoute, Router } from '@angular/router'
 import { Observable } from 'rxjs'
 import { ProductVariant } from '../../domain'
 import { filter, map, switchMap } from 'rxjs/operators'
@@ -19,7 +19,8 @@ export class ProductContainerComponent implements OnInit {
   constructor(
     private service: OrderService,
     private route: ActivatedRoute,
-    private dialogService: DialogService
+    private dialogService: DialogService,
+    private router: Router
   ) {}
 
   ngOnInit() {
@@ -35,11 +36,25 @@ export class ProductContainerComponent implements OnInit {
   }
   handleGroupBuy(variants: ProductVariant[]) {
     const top = 40
-
+    const formSubmitted = new EventEmitter()
+    formSubmitted.subscribe(ev=>{
+      this.dialogService.saveData(ev)
+      this.router.navigate(['/orders/confirm'])
+    })
+    const selected = new EventEmitter()
+    selected.subscribe(ev=>{
+      this.selectedIndex = ev
+    })
     this.dialogService.open(ProductVariantDialogComponent, {
       // 如果 key 和 value 是一个名字，直接写就可以
-      inputs: {},
-      outputs: {},
+      inputs: {
+        variants,
+        selectedVariantIndex: this.selectedIndex
+      },
+      outputs: {
+        formSubmitted,
+        selected
+      },
       position: {
         top: `${top}%`,
         left: '0',
